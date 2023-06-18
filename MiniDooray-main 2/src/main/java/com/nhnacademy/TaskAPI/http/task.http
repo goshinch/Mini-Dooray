@@ -1,0 +1,36 @@
+### GET /tasks
+GET /tasks HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### GET /tasks/{taskId}
+GET /tasks/2 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### POST /tasks/new?projectId={id}
+POST /tasks/new?projectId=1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+{
+  "taskName": "first task",
+  "description": "first description",
+  "state": "WORKING"
+}
+
+### PATCH /tasks/update?taskId={id}
+PATCH /tasks/update?taskId=16 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+{
+  "taskName": "update task",
+  "description": "update description",
+  "state": "COMPLETE"
+}
+
+### DELETE /tasks/delete?taskId={taskId}
+DELETE /tasks/delete?taskId=5 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json

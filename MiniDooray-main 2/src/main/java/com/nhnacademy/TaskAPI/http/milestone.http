@@ -1,0 +1,43 @@
+### GET /milestones/list
+GET /milestones/list HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### GET /milestones/list/{projectId}
+GET /milestones/list/2 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### GET /milestones/{id}
+GET /milestones/1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### POST /milestones/new?projectId={id}
+POST /milestones/new?projectId=1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+{
+  "projectId": "2",
+  "milestoneName": "name list test",
+  "startAt": "2023-06-09T15:30:15",
+  "endAt": "2023-06-09T15:30:15"
+}
+
+### PATCH /milestones/update/{milestoneId}?projectId={id}
+PATCH /milestones/update/16?projectId=2 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+{
+  "projectId": "2",
+  "milestoneName": "name update test",
+  "startAt": "2023-06-13T15:30:15",
+  "endAt": "2023-06-13T15:30:15"
+}
+
+### DELETE /milestones/delete?milestoneId={id}
+DELETE /milestones/delete?miletstoneId=16 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json

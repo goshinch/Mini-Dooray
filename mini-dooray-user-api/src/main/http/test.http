@@ -1,0 +1,75 @@
+###
+
+GET http://localhost:7070/account/users
+Content-Type: application/json
+
+###
+
+PUT http://localhost:7070/account/admin/users/3
+Content-Type: application/json
+
+{
+  "userId": "asd",
+  "name": "asd",
+  "password": "asd",
+  "email": "aszxczd@nhnacademy.com",
+  "status": "DORMANT_STATE"
+}
+
+###
+
+DELETE http://localhost:7070/account/admin/users/13
+
+###
+
+GET http://localhost:7070/account/users/admin
+
+###
+
+POST http://localhost:7070/account/email
+Content-Type: application/json
+
+{
+  "email": "user1@nhnacademy.com"
+}
+
+###
+
+GET http://localhost:7070/account/exist/emails?email=user1@nhnacademy.com
+Content-Type: application/json
+
+###
+
+POST http://localhost:7070/account/signUp
+Content-Type: application/json
+
+{
+  "userId": "zz1zz",
+  "name": "zz1zz",
+  "password": "zz1zz",
+  "email": "zz1zz@nhnacademy.com",
+  "type": "DEFAULT"
+}
+
+###
+
+POST http://localhost:7070/account/git/signUp
+Content-Type: application/json
+
+{
+  "name": "xccvv",
+  "email": "ccvc@aa.com"
+}
+
+###
+
+POST http://localhost:7070/account/password
+Content-Type: application/json
+
+{
+  "user_id": "user1"
+}
+
+###
+
+GET http://localhost:7070/account?id=0&page=0&size=4

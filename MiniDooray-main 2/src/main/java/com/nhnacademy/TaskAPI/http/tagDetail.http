@@ -1,0 +1,34 @@
+### GET /tagDetails/list/{projectId}
+GET /tagDetails/list/1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### GET /tagDetails/{tagDetailId}
+GET /tagDetails/5 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### POST /tagDetails/new?projectId={projectId}
+POST /tagDetails/new?projectId=1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+{
+  "projectId": "3",
+  "tagName": "tag name test"
+}
+
+### PATCH /tagDetails/update?tagDetailId={tagDetailId}
+PATCH /tagDetails/update?tagDetailId=4 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+{
+  "projectId": "1",
+  "tagName": "tag name update test"
+}
+
+### DELETE /tagDetails/delete?tagDetailId={id}
+DELETE /tagDetails/delete?tagDetailId=1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json

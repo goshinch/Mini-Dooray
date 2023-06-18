@@ -1,0 +1,34 @@
+### GET /templates
+GET /templates HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### GET /templates/{templateId}
+GET /templates/1?projectId=1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### POST /templates/new
+POST /templates/new HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+{
+  "name": "first project",
+  "explanation": "first explanation"
+}
+
+### PATCH /templates/update/{templateId}
+PATCH /templates/update/1?projectId=1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+{
+  "name": "update project",
+  "explanation": "update explanation"
+}
+
+### DELETE /templates/delete
+DELETE /templates/delete?templateId=1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json

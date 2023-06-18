@@ -1,0 +1,36 @@
+### GET /comments/list/{taskId}
+GET /comments/list/1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### GET /comments/{commentId}
+GET /comments/1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### POST /comments/new?commentId={commentId}
+POST /comments/new?commentId=1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+{
+  "taskId": "1",
+  "userId": "1",
+  "content": "comment new"
+}
+
+### PATCH /comments/update/{commentId}?taskId={taskId}
+PATCH /comments/update/4?taskId=1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+{
+  "commentId": "1",
+  "taskId": "1",
+  "content": "comment update"
+}
+
+### DELETE /comments/delete?commentId={id}
+DELETE /comments/delete?commentId=4 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json

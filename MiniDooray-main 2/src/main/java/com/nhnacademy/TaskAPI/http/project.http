@@ -1,0 +1,39 @@
+### GET /projects
+GET /projects HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### GET /projects/{projectId}
+GET /projects/1 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+### POST /projects/new
+POST /projects/new HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+{
+  "name": "first project",
+  "masterId": 1,
+  "explanation": "first explanation",
+  "status": "ACTIVITY",
+  "templateId": 3
+}
+
+### PATCH /projects/update
+PATCH /projects/update?projectId=12 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
+
+{
+  "name": "update project",
+  "explanation": "update explanation",
+  "status": "ACTIVITY",
+  "templateId": 4
+}
+
+### DELETE /projects/delete
+DELETE /projects/delete?projectId=11 HTTP/1.1
+Host: localhost:9090
+Content-Type: application/json
